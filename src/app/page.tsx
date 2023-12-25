@@ -1,95 +1,67 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+    <MaxWidthWrapper>
+      <div className="container ">
+        <h1 className="display-4 m-4 text-center underline-offset-2 underline text-gray-400">
+          Cos&apos;è Next.js?
+        </h1>
+        <p className="lead text-justify m-4 ">
+          Next.js è un framework React per lo sviluppo di applicazioni web
+          full-stack. Utilizza i componenti React per creare interfacce utente e
+          integra Next.js per aggiungere funzionalità e ottimizzazioni.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+        <p>
+          In dettaglio, Next.js astrae e configura automaticamente gli strumenti
+          necessari per React, come il bundling e la compilazione. Ciò consente
+          di concentrarsi sulla costruzione dell&apos;applicazione anziché sulla
+          configurazione.
+        </p>
+        <p>
+          Che tu sia uno sviluppatore individuale o faccia parte di un team più
+          ampio, Next.js può aiutarti a creare applicazioni React interattive,
+          dinamiche e veloci.
+        </p>
+
+        <h2 className="mt-4 text-2xl text-gray-400 hover:underline-offset-2 hover:underline hover:cursor-default">
+          Principali Caratteristiche
+        </h2>
+        <ul className="list-group text-justify">
+          <li className="list-group-item">
+            <strong>Routing:</strong> Un router basato sul file system costruito
+            su Server Components che supporta layout, routing nidificato,
+            gestione degli stati di caricamento, errori e altro ancora.
+          </li>
+          <li className="list-group-item">
+            <strong>Rendering:</strong> Renderizzazione lato client e lato
+            server con Componenti client e server. Ulteriormente ottimizzato con
+            rendering statico e dinamico sul server tramite Next.js. Streaming
+            su Edge e runtime Node.js.
+          </li>
+          <li className="list-group-item">
+            <strong>Recupero Dati:</strong> Recupero semplificato dei dati con
+            async/await in Server Components e un&apos;API fetch estesa per la
+            memorizzazione delle richieste, la memorizzazione nella cache dei
+            dati e la riconvalida.
+          </li>
+          <li className="list-group-item">
+            <strong>Styling:</strong> Supporto per i tuoi metodi di stile
+            preferiti, tra cui CSS Modules, Tailwind CSS e CSS-in-JS.
+          </li>
+          <li className="list-group-item">
+            <strong>Ottimizzazioni:</strong> Ottimizzazioni per immagini, font e
+            script per migliorare i Core Web Vitals e l&apos;esperienza utente
+            dell&apos;applicazione.
+          </li>
+          <li className="list-group-item">
+            <strong>TypeScript:</strong> Miglior supporto per TypeScript, con
+            una verifica dei tipi più accurata e una compilazione più
+            efficiente, oltre a un plugin TypeScript personalizzato e un type
+            checker.
+          </li>
+        </ul>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </MaxWidthWrapper>
+  );
 }
